@@ -10,7 +10,26 @@ if (!process.env.DATABASE_URL) {
   );
 }
 
-export const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+const connectionString = process.env.DATABASE_URL;
+const needsSsl =
+  connectionString.includes("supabase.co") ||
+  connectionString.includes("neon.tech") ||
+  connectionString.includes("sslmode=require");
+
+export const pool = new Pool({
+  connectionString,
+  ssl: needsSsl ? { rejectUnauthorized: false } : undefined,
+});
 export const db = drizzle(pool, { schema });
+
+export async function pingDatabase(): Promise<boolean> {
+  const client = await pool.connect();
+  try {
+    await client.query("SELECT 1");
+    return true;
+  } finally {
+    client.release();
+  }
+}
 
 export * from "./schema";
