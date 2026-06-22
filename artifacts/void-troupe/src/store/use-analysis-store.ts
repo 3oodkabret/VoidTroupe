@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import type { AnalyzeResponse } from '@workspace/api-client-react/src/generated/api.schemas';
+import type { AnalyzeResponse } from '@workspace/api-client-react';
 
 interface AnalysisState {
   currentResult: AnalyzeResponse | null;

@@ -1,3 +1,4 @@
+import type { ComponentProps } from "react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { ArrowRight, Brain, Fingerprint, Activity, Heart, ShieldAlert } from "lucide-react";
@@ -45,7 +46,7 @@ const TRAITS = [
   }
 ];
 
-function SparklesIcon(props: any) {
+function SparklesIcon(props: ComponentProps<typeof Brain>) {
   return <Brain {...props} />;
 }
 

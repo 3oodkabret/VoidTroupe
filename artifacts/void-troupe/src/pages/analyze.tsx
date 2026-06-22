@@ -1,7 +1,10 @@
 import { useState, useMemo } from "react";
 import { useLocation } from "wouter";
 import { motion } from "framer-motion";
-import { useAnalyzePersonality } from "@workspace/api-client-react";
+import {
+  useAnalyzePersonality,
+  type AnalyzeResponse,
+} from "@workspace/api-client-react";
 import { useAnalysisStore } from "@/store/use-analysis-store";
 import { Sparkles, AlertCircle, Loader2 } from "lucide-react";
 
@@ -14,7 +17,7 @@ export default function Analyze() {
   
   const { mutate, isPending, error } = useAnalyzePersonality({
     mutation: {
-      onSuccess: (data) => {
+      onSuccess: (data: AnalyzeResponse) => {
         setResult(data);
         setLocation("/results");
       }
