@@ -298,29 +298,37 @@ router.post("/analyze", async (req, res) => {
   }
 });
 
-router.get("/analyses", async (_req, res) => {
-  const rows = await db
-    .select()
-    .from(analysesTable)
-    .orderBy(desc(analysesTable.createdAt))
-    .limit(20);
+router.get("/analyses", async (req, res) => {
+  try {
+    const rows = await db
+      .select()
+      .from(analysesTable)
+      .orderBy(desc(analysesTable.createdAt))
+      .limit(20);
 
-  const response = GetAnalysesResponse.parse({
-    analyses: rows.map((row) => ({
-      id: row.id,
-      wordCount: row.wordCount,
-      scores: {
-        openness: row.openness,
-        conscientiousness: row.conscientiousness,
-        extraversion: row.extraversion,
-        agreeableness: row.agreeableness,
-        neuroticism: row.neuroticism,
-      },
-      createdAt: row.createdAt.toISOString(),
-    })),
-  });
+    const response = GetAnalysesResponse.parse({
+      analyses: rows.map((row) => ({
+        id: row.id,
+        wordCount: row.wordCount,
+        scores: {
+          openness: row.openness,
+          conscientiousness: row.conscientiousness,
+          extraversion: row.extraversion,
+          agreeableness: row.agreeableness,
+          neuroticism: row.neuroticism,
+        },
+        createdAt: row.createdAt.toISOString(),
+      })),
+    });
 
-  res.json(response);
+    res.json(response);
+  } catch (error) {
+    req.log.error({ err: error }, "Failed to fetch analysis history");
+    res.status(500).json({
+      error:
+        "Unable to load analysis history right now. Ensure the analyses table exists in production database.",
+    });
+  }
 });
 
 export default router;
