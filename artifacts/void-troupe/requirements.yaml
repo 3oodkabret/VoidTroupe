@@ -1,0 +1,17 @@
+packages:
+  "recharts": "Required for Radar and Bar charts to display personality traits"
+  "framer-motion": "Required for smooth, premium entry animations and transitions"
+  "zustand": "Required for lightweight global state to share analysis results between pages"
+  "lucide-react": "Icons for UI elements"
+
+images:
+  - path: "artifacts/void-troupe/public/images/cosmic-void-bg.png"
+    description: "A deep, dark, mysterious cosmic void with subtle purple, violet, and deep blue nebulae dust. Minimalist, premium, dark mode aesthetic, smooth gradients, no bright stars, just deep atmospheric space."
+    aspect_ratio: "16:9"
+  - path: "artifacts/void-troupe/public/images/abstract-orb.png"
+    description: "An abstract, dark glowing orb with ethereal purple and indigo light emanating from its core. 3D rendered, glassmorphism style, premium UI element on a purely black background."
+    aspect_ratio: "1:1"
+
+notes:
+  - Assuming @workspace/api-client-react exports useAnalyzePersonality and types
+  - Using Zustand to pass the AnalyzeResponse from /analyze to /results without needing a separate GET by ID endpoint since the spec doesn't explicitly provide one for a single result by ID.

@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+artifacts/**/.env
+artifacts/**/.env.*
+!artifacts/**/.env.example
+
+# Local database files
+.pgdata/
+*.tar.gz
+/void-troupe.tar.gz
+
+# Build output
+dist/
+**/dist/
+artifacts/void-troupe/dist/
+
+# Logs & OS
+*.log
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

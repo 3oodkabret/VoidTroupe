@@ -1,0 +1,157 @@
+openapi: 3.1.0
+info:
+  title: Api
+  version: 0.1.0
+  description: Void Troupe API specification
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: analysis
+    description: Personality analysis operations
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      description: Returns server health status
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+  /analyze:
+    post:
+      operationId: analyzePersonality
+      tags: [analysis]
+      summary: Analyze personality from text
+      description: Submits text and returns Big Five personality trait scores
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AnalyzeRequest"
+      responses:
+        "200":
+          description: Analysis result with Big Five trait scores
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AnalyzeResponse"
+        "400":
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /analyses:
+    get:
+      operationId: getAnalyses
+      tags: [analysis]
+      summary: Get recent analyses
+      description: Returns a list of recent personality analyses
+      responses:
+        "200":
+          description: List of recent analyses
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AnalysesListResponse"
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+    AnalyzeRequest:
+      type: object
+      properties:
+        text:
+          type: string
+          description: User's self-description text (at least 50 words)
+      required:
+        - text
+    BigFiveScores:
+      type: object
+      properties:
+        openness:
+          type: number
+          description: Openness to experience score (0-100)
+        conscientiousness:
+          type: number
+          description: Conscientiousness score (0-100)
+        extraversion:
+          type: number
+          description: Extraversion score (0-100)
+        agreeableness:
+          type: number
+          description: Agreeableness score (0-100)
+        neuroticism:
+          type: number
+          description: Neuroticism score (0-100)
+      required:
+        - openness
+        - conscientiousness
+        - extraversion
+        - agreeableness
+        - neuroticism
+    AnalyzeResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+        text:
+          type: string
+        scores:
+          $ref: "#/components/schemas/BigFiveScores"
+        wordCount:
+          type: integer
+        createdAt:
+          type: string
+      required:
+        - id
+        - text
+        - scores
+        - wordCount
+        - createdAt
+    AnalysisSummary:
+      type: object
+      properties:
+        id:
+          type: integer
+        wordCount:
+          type: integer
+        scores:
+          $ref: "#/components/schemas/BigFiveScores"
+        createdAt:
+          type: string
+      required:
+        - id
+        - wordCount
+        - scores
+        - createdAt
+    AnalysesListResponse:
+      type: object
+      properties:
+        analyses:
+          type: array
+          items:
+            $ref: "#/components/schemas/AnalysisSummary"
+      required:
+        - analyses
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+      required:
+        - error

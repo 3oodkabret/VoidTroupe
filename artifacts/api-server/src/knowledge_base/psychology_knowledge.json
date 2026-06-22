@@ -1,0 +1,287 @@
+{
+  "version": "1.0.0",
+  "domain": "Big Five Personality Traits",
+  "intended_use": "Specialized knowledge base for personalized coaching-style responses in API flows.",
+  "big_five": {
+    "openness": {
+      "high": {
+        "profile_label": "High Openness",
+        "best_work_environments": [
+          "Innovation-heavy teams where experimentation is rewarded and failure is treated as learning data.",
+          "Roles with conceptual complexity: product strategy, design research, R&D, and cross-disciplinary problem solving.",
+          "Flexible structures that allow autonomy, deep work blocks, and room to challenge assumptions.",
+          "Cultures that value curiosity, aesthetics, ideas, and continuous learning over rigid routines."
+        ],
+        "critical_relationship_risks": [
+          "Intellectualizing emotions can make partners feel unseen when they need simple emotional presence.",
+          "Novelty-seeking may be perceived as instability or lack of commitment in long-term bonds.",
+          "Idealizing potential over reality can create chronic disappointment with ordinary relationship phases.",
+          "Over-analysis during conflict can delay repair and make conversations feel like debates."
+        ],
+        "personalized_self_development": [
+          "Pair creativity with execution rituals: convert every big idea into one concrete weekly deliverable.",
+          "Practice emotional grounding before interpretation: name feeling first, explain later.",
+          "Use a 'novelty budget' (time/money/attention) to prevent fragmentation of goals.",
+          "Train tolerance for boredom; sustained repetition is often the gateway to mastery."
+        ],
+        "stress_management_strategies": [
+          "Reduce cognitive overload by limiting simultaneous inputs (books, podcasts, projects) during high-pressure periods.",
+          "Switch from abstract rumination to sensory regulation: breath pacing, walking, and body-based resets.",
+          "Use structured reflection prompts: What is controllable now? What is one next concrete step?",
+          "Schedule decompression through creative expression without performance pressure."
+        ]
+      },
+      "low": {
+        "profile_label": "Low Openness",
+        "best_work_environments": [
+          "Operationally stable organizations with clear SOPs, predictable cadence, and explicit role boundaries.",
+          "Quality control, compliance, logistics, and process-focused roles that reward consistency and reliability.",
+          "Teams where expectations are concrete, measurable, and tied to practical outcomes.",
+          "Workplaces where domain expertise and accumulated experience are respected."
+        ],
+        "critical_relationship_risks": [
+          "Resistance to change can be interpreted as emotional rigidity or unwillingness to grow together.",
+          "Dismissing partner perspectives that differ from familiar norms can erode psychological safety.",
+          "Avoiding difficult emotional topics may create silent distance over time.",
+          "Preference for certainty may lead to controlling behavior under ambiguity."
+        ],
+        "personalized_self_development": [
+          "Adopt gradual exposure: one small new experience weekly to expand flexibility without overwhelm.",
+          "Use 'test, don't trust' mindset toward new methods; evaluate with short experiments rather than rejection.",
+          "Practice perspective-taking by restating the other person's view before responding.",
+          "Build adaptive confidence: keep routines, but design fallback plans for unexpected disruptions."
+        ],
+        "stress_management_strategies": [
+          "Anchor stress periods with non-negotiable routines (sleep, meal timing, work start ritual).",
+          "Prepare decision templates for uncertain situations to reduce threat reactivity.",
+          "When overwhelmed, shift to checklists and stepwise execution to regain control.",
+          "Use predictable recovery blocks (quiet environment, low stimulation, repetitive tasks)."
+        ]
+      }
+    },
+    "conscientiousness": {
+      "high": {
+        "profile_label": "High Conscientiousness",
+        "best_work_environments": [
+          "Goal-driven organizations with high accountability, clear KPIs, and quality standards.",
+          "Project management, finance, operations, medicine, and engineering contexts requiring precision.",
+          "Teams that reward reliability, planning depth, and responsible follow-through.",
+          "Environments with transparent ownership and minimal role ambiguity."
+        ],
+        "critical_relationship_risks": [
+          "Perfectionism can become chronic criticism, making partners feel constantly evaluated.",
+          "Task-priority bias may deprioritize emotional spontaneity and affection.",
+          "Need for control can escalate during uncertainty, creating relational rigidity.",
+          "Difficulty forgiving mistakes can prolong conflict cycles."
+        ],
+        "personalized_self_development": [
+          "Differentiate excellence from perfection: define 'good enough' thresholds in advance.",
+          "Schedule relationship maintenance like any strategic priority (quality time, repair conversations).",
+          "Practice flexibility drills: intentionally delegate and accept alternate methods.",
+          "Track progress by outcomes and wellbeing, not effort alone."
+        ],
+        "stress_management_strategies": [
+          "Use priority triage: critical, important, optional; avoid treating every task as urgent.",
+          "Interrupt overwork loops with hard stop times and recovery commitments.",
+          "Counter self-pressure with realistic planning buffers and error margins.",
+          "During stress, focus on completion velocity for essentials rather than perfection depth."
+        ]
+      },
+      "low": {
+        "profile_label": "Low Conscientiousness",
+        "best_work_environments": [
+          "Dynamic roles that value improvisation, social responsiveness, and quick adaptation.",
+          "Creative production settings where iteration speed matters more than linear planning.",
+          "Teams with strong external structure: deadlines, short feedback cycles, visible task boards.",
+          "Work that combines variety with immediate consequences to sustain engagement."
+        ],
+        "critical_relationship_risks": [
+          "Inconsistency in promises can damage trust faster than overt conflict.",
+          "Avoiding planning around money/time/shared duties creates repeated friction.",
+          "Impulsivity in words or decisions can produce avoidable relational harm.",
+          "Defensiveness about accountability can block repair and growth."
+        ],
+        "personalized_self_development": [
+          "Use frictionless systems: calendar defaults, reminders, habit stacking, and two-minute start rules.",
+          "Translate intentions into visible commitments (written plans, shared trackers).",
+          "Limit active goals; finish-before-new reduces chronic incompletion.",
+          "Pair accountability with identity: 'I am a person who keeps small promises daily.'"
+        ],
+        "stress_management_strategies": [
+          "Under stress, simplify to one next action; complexity often triggers avoidance.",
+          "Use body activation first (short walk, cold splash, brief exercise) to break inertia.",
+          "Apply time-boxing sprints with immediate rewards for completion.",
+          "Ask for external structure early rather than waiting for crisis pressure."
+        ]
+      }
+    },
+    "extraversion": {
+      "high": {
+        "profile_label": "High Extraversion",
+        "best_work_environments": [
+          "Collaborative, high-energy teams with frequent interaction and rapid feedback.",
+          "Client-facing roles: sales, consulting, community leadership, facilitation, and partnerships.",
+          "Environments with visible momentum, short wins, and social recognition.",
+          "Work cultures that encourage speaking up, networking, and initiative."
+        ],
+        "critical_relationship_risks": [
+          "Attention needs may be interpreted as self-focus if listening quality is low.",
+          "Over-socializing can trigger jealousy or neglect concerns with partners.",
+          "Conflict escalation risk increases with impulsive expression under emotion.",
+          "Discomfort with silence may prevent deep, vulnerable intimacy."
+        ],
+        "personalized_self_development": [
+          "Train active listening ratios: ask more, summarize more, advise less.",
+          "Protect intimacy through undistracted one-on-one time, not only group socializing.",
+          "Build pause discipline before reacting in conflict-heavy moments.",
+          "Develop depth habits (journaling, reflection, quiet thinking) to complement social strengths."
+        ],
+        "stress_management_strategies": [
+          "Use co-regulation: talk with trusted people, but avoid repetitive venting loops.",
+          "Convert anxious activation into constructive social action (helping, collaborating, problem-solving).",
+          "Reduce stimulation when flooded: quiet room, lower notifications, solo reset windows.",
+          "Use brief movement breaks to discharge physiological arousal."
+        ]
+      },
+      "low": {
+        "profile_label": "Low Extraversion (Introversion)",
+        "best_work_environments": [
+          "Low-interruption settings that favor depth, concentration, and thoughtful output.",
+          "Independent roles in analysis, writing, programming, design, and research.",
+          "Teams that respect asynchronous communication and preparation time before meetings.",
+          "Workplaces where contribution quality matters more than verbal dominance."
+        ],
+        "critical_relationship_risks": [
+          "Emotional privacy can be misread as detachment or lack of care.",
+          "Conflict avoidance may suppress issues until they become harder to repair.",
+          "Social withdrawal under stress can create unintentional abandonment signals.",
+          "Low outward expressiveness may hide appreciation and warmth from partners."
+        ],
+        "personalized_self_development": [
+          "Practice explicit warmth: verbal appreciation, reassurance, and proactive check-ins.",
+          "Use structured vulnerability windows (10-15 minutes daily emotional sharing).",
+          "Set social pacing agreements with partners to balance solitude and connection.",
+          "Prepare scripts for difficult conversations to reduce avoidance."
+        ],
+        "stress_management_strategies": [
+          "Protect recovery through quiet time, sensory boundaries, and reduced social load.",
+          "Use written processing to clarify thoughts before high-stakes conversations.",
+          "Break overwhelming interpersonal tasks into staged communication steps.",
+          "Re-enter connection intentionally after isolation to prevent prolonged disengagement."
+        ]
+      }
+    },
+    "agreeableness": {
+      "high": {
+        "profile_label": "High Agreeableness",
+        "best_work_environments": [
+          "Mission-driven teams emphasizing trust, collaboration, and prosocial impact.",
+          "People-centered roles: HR, counseling support, customer success, teaching, and care work.",
+          "Cultures that reward cooperation and emotional intelligence.",
+          "Teams where psychological safety enables respectful disagreement."
+        ],
+        "critical_relationship_risks": [
+          "People-pleasing can suppress authentic needs, leading to resentment accumulation.",
+          "Weak boundaries may attract exploitative dynamics.",
+          "Conflict avoidance can create false harmony while problems deepen.",
+          "Over-accommodation can reduce attraction if self-respect signals are weak."
+        ],
+        "personalized_self_development": [
+          "Practice assertive honesty: kind tone, clear boundaries, explicit needs.",
+          "Use 'no' scripts to protect energy without guilt narratives.",
+          "Track resentment as a boundary indicator, not a character flaw.",
+          "Develop conflict competence: disagreement as repair path, not relational threat."
+        ],
+        "stress_management_strategies": [
+          "Stop emotional over-functioning for others during personal overload.",
+          "Prioritize self-care tasks before offering additional support.",
+          "Use boundary-based stress reduction: limit availability windows and response times.",
+          "Choose selective empathy; care deeply without absorbing every burden."
+        ]
+      },
+      "low": {
+        "profile_label": "Low Agreeableness",
+        "best_work_environments": [
+          "Debate-tolerant cultures that value critical thinking and direct feedback.",
+          "Negotiation, litigation, strategy, and turnaround contexts requiring tough tradeoffs.",
+          "Meritocratic teams where challenge and performance standards are explicit.",
+          "Roles where objectivity and skepticism protect quality decisions."
+        ],
+        "critical_relationship_risks": [
+          "Blunt communication can be experienced as contempt, not honesty.",
+          "Winning arguments over preserving bond safety erodes trust.",
+          "Low empathy expression can make partners feel emotionally unsafe.",
+          "Chronic fault-finding can overshadow shared goodwill."
+        ],
+        "personalized_self_development": [
+          "Separate truth from delivery: maintain standards while softening interpersonal impact.",
+          "Train empathy micro-skills: validate before critique, ask before concluding.",
+          "Use collaborative language in conflict ('us vs problem' instead of 'me vs you').",
+          "Practice appreciation frequency to rebalance negativity bias."
+        ],
+        "stress_management_strategies": [
+          "Under stress, reduce adversarial framing and avoid binary win/lose thinking.",
+          "Use timeout rules in heated conversations to prevent verbal damage.",
+          "Channel intensity into structured problem-solving, not personal attacks.",
+          "Track physiological cues (voice volume, muscle tension) as early de-escalation signals."
+        ]
+      }
+    },
+    "neuroticism": {
+      "high": {
+        "profile_label": "High Neuroticism",
+        "best_work_environments": [
+          "Supportive teams with predictable communication, role clarity, and low ambiguity.",
+          "Managers who provide frequent feedback and psychologically safe escalation paths.",
+          "Workflows with early risk detection and contingency planning.",
+          "Cultures that normalize mental recovery and sustainable pacing."
+        ],
+        "critical_relationship_risks": [
+          "Threat sensitivity can lead to reassurance-seeking cycles that exhaust partners.",
+          "Catastrophic interpretation of minor signals increases conflict intensity.",
+          "Emotional flooding may produce impulsive reactions and regret.",
+          "Fear of rejection can trigger pre-emptive distancing or testing behaviors."
+        ],
+        "personalized_self_development": [
+          "Build emotional literacy: distinguish fear, shame, anger, and sadness before acting.",
+          "Use cognitive reframing protocols to challenge catastrophic predictions.",
+          "Develop distress tolerance routines (urge surfing, paced breathing, grounding).",
+          "Strengthen secure attachment habits: direct requests instead of indirect tests."
+        ],
+        "stress_management_strategies": [
+          "Create a stress ladder with pre-planned interventions by intensity level.",
+          "Lower uncertainty exposure: define what is known, unknown, and next verifiable action.",
+          "Prioritize sleep and stimulant regulation; physiological stability reduces emotional volatility.",
+          "Use short regulation cycles repeatedly (2-5 minutes) instead of waiting for full overwhelm."
+        ]
+      },
+      "low": {
+        "profile_label": "Low Neuroticism (High Emotional Stability)",
+        "best_work_environments": [
+          "High-pressure settings that require calm judgment and crisis composure.",
+          "Leadership roles where steady affect helps teams stay functional under uncertainty.",
+          "Fast-changing environments where emotional reactivity would otherwise impair decisions.",
+          "Contexts demanding resilience, persistence, and long time horizons."
+        ],
+        "critical_relationship_risks": [
+          "Emotional steadiness can be misread as emotional distance if empathy is not explicit.",
+          "Underestimating partner distress may feel invalidating during vulnerable moments.",
+          "Problem-solving too quickly can bypass emotional attunement.",
+          "Low personal anxiety may lead to blind spots about latent relational risks."
+        ],
+        "personalized_self_development": [
+          "Pair calmness with visible empathy: reflect feelings before offering solutions.",
+          "Increase emotional granularity to avoid appearing indifferent.",
+          "Periodically audit relationship health instead of assuming stability equals safety.",
+          "Practice proactive reassurance for partners with higher emotional sensitivity."
+        ],
+        "stress_management_strategies": [
+          "Leverage baseline composure to model co-regulation for others without over-rescuing.",
+          "Watch for delayed stress accumulation masked by functional performance.",
+          "Use reflective check-ins to detect subtle strain before burnout onset.",
+          "Maintain challenge-recovery balance; resilience still requires replenishment."
+        ]
+      }
+    }
+  }
+}
