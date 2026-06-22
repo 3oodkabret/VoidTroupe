@@ -1,4 +1,5 @@
 import type { AuthUser } from "@/store/use-auth-store";
+import { withApiBase } from "@/lib/api-base";
 
 type AuthResponse = {
   token: string;
@@ -53,21 +54,21 @@ async function patchJson<T>(url: string, body: unknown, token?: string): Promise
 }
 
 export function loginRequest(email: string, password: string) {
-  return postJson<AuthResponse>("/api/auth/login", { email, password });
+  return postJson<AuthResponse>(withApiBase("/api/auth/login"), { email, password });
 }
 
 export function registerRequest(name: string, email: string, password: string) {
-  return postJson<AuthResponse>("/api/auth/register", { name, email, password });
+  return postJson<AuthResponse>(withApiBase("/api/auth/register"), { name, email, password });
 }
 
 export function forgotPasswordRequest(email: string) {
-  return postJson<{ message?: string }>("/api/auth/forgot-password", { email });
+  return postJson<{ message?: string }>(withApiBase("/api/auth/forgot-password"), { email });
 }
 
 export function resetPasswordRequest(token: string, password: string) {
-  return postJson<{ message?: string }>("/api/auth/reset-password", { token, password });
+  return postJson<{ message?: string }>(withApiBase("/api/auth/reset-password"), { token, password });
 }
 
 export function updateProfileRequest(token: string, name: string) {
-  return patchJson<{ user: AuthUser }>("/api/auth/profile", { name }, token);
+  return patchJson<{ user: AuthUser }>(withApiBase("/api/auth/profile"), { name }, token);
 }

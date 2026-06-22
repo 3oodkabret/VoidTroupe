@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer, Tooltip as RechartsTooltip } from "recharts";
 import { useAnalysisStore } from "@/store/use-analysis-store";
+import { withApiBase } from "@/lib/api-base";
 import { ArrowLeft, Share2, BrainCircuit, Send, Loader2, MessageCircle, Minus, Sparkles } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
@@ -127,7 +128,7 @@ export default function Results() {
     setIsSending(true);
 
     try {
-      const response = await fetch("/api/chat", {
+      const response = await fetch(withApiBase("/api/chat"), {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
