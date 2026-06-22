@@ -1,10 +1,20 @@
 import { Router, type IRouter } from "express";
 import { db } from "@workspace/db";
 import { analysesTable } from "@workspace/db/schema";
-import { desc } from "drizzle-orm";
+import { desc, eq } from "drizzle-orm";
 import { AnalyzePersonalityBody, AnalyzePersonalityResponse, GetAnalysesResponse } from "@workspace/api-zod";
+import { getBearerToken, verifyAuthToken } from "../lib/auth";
 
 const router: IRouter = Router();
+
+function resolveAuthUser(req: { header(name: string): string | undefined }) {
+  const token = getBearerToken(req.header("authorization"));
+  if (!token) {
+    return null;
+  }
+
+  return verifyAuthToken(token);
+}
 
 type BigFiveScores = {
   openness: number;
@@ -211,6 +221,7 @@ async function callGroqAnalyze(text: string): Promise<string> {
 }
 
 router.post("/analyze", async (req, res) => {
+  const auth = resolveAuthUser(req);
   const parseResult = AnalyzePersonalityBody.safeParse(req.body);
   if (!parseResult.success) {
     res.status(400).json({ error: "Invalid request body" });
@@ -255,6 +266,7 @@ router.post("/analyze", async (req, res) => {
     const [inserted] = await db
       .insert(analysesTable)
       .values({
+        userId: auth?.userId ?? null,
         text,
         wordCount,
         ...scores,
@@ -299,10 +311,17 @@ router.post("/analyze", async (req, res) => {
 });
 
 router.get("/analyses", async (req, res) => {
+  const auth = resolveAuthUser(req);
+  if (!auth) {
+    res.status(401).json({ error: "Authentication required." });
+    return;
+  }
+
   try {
     const rows = await db
       .select()
       .from(analysesTable)
+      .where(eq(analysesTable.userId, auth.userId))
       .orderBy(desc(analysesTable.createdAt))
       .limit(20);
 
