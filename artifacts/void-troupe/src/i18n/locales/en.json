@@ -8,7 +8,8 @@
       "language": "Language",
       "profile": "Profile",
       "login": "Login",
-      "logout": "Logout"
+      "logout": "Logout",
+      "menu": "Menu"
     },
     "languageNames": {
       "en": "English",
@@ -25,6 +26,7 @@
     "a11y": {
       "more": "More",
       "close": "Close",
+      "openMenu": "Open menu",
       "previousSlide": "Previous slide",
       "nextSlide": "Next slide"
     },

@@ -3,11 +3,17 @@ import { useTranslation } from "react-i18next";
 
 const LANGUAGE_OPTIONS = ["en", "ar", "tr"] as const;
 
-export function LanguageSwitcher() {
+type LanguageSwitcherProps = {
+  className?: string;
+};
+
+export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
   const { t, i18n } = useTranslation();
 
   return (
-    <label className="flex items-center gap-2 px-3 py-2 rounded-md bg-white/5 border border-white/10 text-xs text-white/90">
+    <label
+      className={`flex items-center gap-2 px-3 py-2 rounded-md bg-white/5 border border-white/10 text-xs text-white/90 ${className ?? ""}`}
+    >
       <Languages className="w-4 h-4 text-primary" />
       <span className="hidden sm:inline">{t("ui.nav.language")}</span>
       <select

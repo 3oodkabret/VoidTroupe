@@ -8,7 +8,8 @@
       "language": "Dil",
       "profile": "Profil",
       "login": "Giriş",
-      "logout": "Çıkış"
+      "logout": "Çıkış",
+      "menu": "Menü"
     },
     "languageNames": {
       "en": "English",
@@ -25,6 +26,7 @@
     "a11y": {
       "more": "Daha fazla",
       "close": "Kapat",
+      "openMenu": "Menüyü aç",
       "previousSlide": "Önceki slayt",
       "nextSlide": "Sonraki slayt"
     },
