@@ -115,6 +115,9 @@ components:
           $ref: "#/components/schemas/BigFiveScores"
         wordCount:
           type: integer
+        summary:
+          type: string
+          description: LLM-generated psychological summary of the user's text
         createdAt:
           type: string
       required:
@@ -122,6 +125,7 @@ components:
         - text
         - scores
         - wordCount
+        - summary
         - createdAt
     AnalysisSummary:
       type: object

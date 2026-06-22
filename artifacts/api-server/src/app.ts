@@ -1,40 +1,23 @@
 import express, { type Express } from "express";
-import cors, { type CorsOptions } from "cors";
-import { pinoHttp } from "pino-http";
-import type { IncomingMessage, ServerResponse } from "http";
+import cors from "cors";
+import pinoHttp from "pino-http";
 import router from "./routes";
 import { logger } from "./lib/logger";
 
 const app: Express = express();
-const allowedOrigins = (process.env["FRONTEND_URL"] ?? "")
-  .split(",")
-  .map((origin) => origin.trim())
-  .filter(Boolean);
-
-const corsOrigin: CorsOptions["origin"] =
-  allowedOrigins.length === 0
-    ? true
-    : (origin, callback) => {
-        if (!origin || allowedOrigins.includes(origin)) {
-          callback(null, true);
-          return;
-        }
-
-        callback(new Error("Origin is not allowed by CORS"));
-      };
 
 app.use(
   pinoHttp({
     logger,
     serializers: {
-      req(req: IncomingMessage) {
+      req(req) {
         return {
           id: req.id,
           method: req.method,
           url: req.url?.split("?")[0],
         };
       },
-      res(res: ServerResponse) {
+      res(res) {
         return {
           statusCode: res.statusCode,
         };
@@ -42,12 +25,7 @@ app.use(
     },
   }),
 );
-app.use(
-  cors({
-    origin: corsOrigin,
-    credentials: true,
-  }),
-);
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

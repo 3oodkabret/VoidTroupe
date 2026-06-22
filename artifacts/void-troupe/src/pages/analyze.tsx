@@ -1,27 +1,34 @@
 import { useState, useMemo } from "react";
 import { useLocation } from "wouter";
 import { motion } from "framer-motion";
-import {
-  useAnalyzePersonality,
-  type AnalyzeResponse,
-} from "@workspace/api-client-react";
+import { useAnalyzePersonality } from "@workspace/api-client-react";
 import { useAnalysisStore } from "@/store/use-analysis-store";
 import { Sparkles, AlertCircle, Loader2 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const MIN_WORDS = 50;
 
 export default function Analyze() {
+  const { t } = useTranslation();
   const [, setLocation] = useLocation();
   const [text, setText] = useState("");
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const { setResult } = useAnalysisStore();
   
   const { mutate, isPending, error } = useAnalyzePersonality({
     mutation: {
-      onSuccess: (data: AnalyzeResponse) => {
+      onSuccess: (data) => {
+        if (!data?.scores) {
+          setSubmitError(
+            t("analyze.page.invalidApiResponse"),
+          );
+          return;
+        }
+        setSubmitError(null);
         setResult(data);
         setLocation("/results");
       }
-    }
+    },
   });
 
   const wordCount = useMemo(() => {
@@ -34,6 +41,7 @@ export default function Analyze() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!isValid || isPending) return;
+    setSubmitError(null);
     mutate({ data: { text } });
   };
 
@@ -48,10 +56,9 @@ export default function Analyze() {
         className="w-full max-w-3xl"
       >
         <div className="text-center mb-10">
-          <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">Speak to the Void</h1>
+          <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">{t("analyze.page.title")}</h1>
           <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-            Write freely about your life, your dreams, your fears, or a recent experience. 
-            The more authentic you are, the deeper the analysis.
+            {t("analyze.page.description")}
           </p>
         </div>
 
@@ -63,14 +70,14 @@ export default function Analyze() {
               <textarea
                 value={text}
                 onChange={(e) => setText(e.target.value)}
-                placeholder="I remember when..."
+                placeholder={t("analyze.page.placeholder")}
                 className="w-full h-80 bg-black/40 rounded-xl p-6 text-lg text-foreground placeholder:text-muted-foreground focus:outline-none resize-none"
                 disabled={isPending}
               />
               
               <div className="absolute bottom-4 right-6 flex items-center gap-4">
                 <span className={`text-sm font-mono transition-colors ${isValid ? 'text-primary' : 'text-muted-foreground'}`}>
-                  {wordCount} / {MIN_WORDS} words
+                  {t("analyze.page.wordCounter", { current: wordCount, minimum: MIN_WORDS })}
                 </span>
                 <div className="w-24 h-1.5 bg-white/10 rounded-full overflow-hidden">
                   <div 
@@ -82,10 +89,10 @@ export default function Analyze() {
             </div>
           </div>
 
-          {error && (
+          {(error || submitError) && (
             <div className="flex items-center gap-2 text-destructive bg-destructive/10 border border-destructive/20 p-4 rounded-xl">
               <AlertCircle className="w-5 h-5 flex-shrink-0" />
-              <p className="text-sm">{error.message || "An error occurred during analysis."}</p>
+              <p className="text-sm">{submitError || error?.message || t("analyze.page.genericError")}</p>
             </div>
           )}
 
@@ -103,12 +110,12 @@ export default function Analyze() {
               {isPending ? (
                 <>
                   <Loader2 className="w-5 h-5 animate-spin" />
-                  Analyzing Psyche...
+                  {t("analyze.page.analyzing")}
                 </>
               ) : (
                 <>
                   <Sparkles className="w-5 h-5" />
-                  Reveal My Nature
+                  {t("analyze.page.submit")}
                 </>
               )}
             </button>

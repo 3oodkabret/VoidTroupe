@@ -1,0 +1,298 @@
+{
+  "ui": {
+    "nav": {
+      "brand": "VOID TROUPE",
+      "history": "Geçmiş",
+      "startAnalysis": "Analizi Başlat",
+      "mbtiTest": "MBTI Testi",
+      "language": "Dil",
+      "profile": "Profil",
+      "login": "Giriş",
+      "logout": "Çıkış"
+    },
+    "languageNames": {
+      "en": "English",
+      "ar": "العربية",
+      "tr": "Türkçe"
+    },
+    "common": {
+      "next": "İleri",
+      "back": "Geri",
+      "submit": "Gönder",
+      "finish": "Bitir",
+      "question": "Soru"
+    },
+    "a11y": {
+      "more": "Daha fazla",
+      "close": "Kapat",
+      "previousSlide": "Önceki slayt",
+      "nextSlide": "Sonraki slayt"
+    },
+    "pagination": {
+      "ariaLabel": "sayfalandırma",
+      "previous": "Önceki",
+      "next": "Sonraki",
+      "previousAria": "Önceki sayfaya git",
+      "nextAria": "Sonraki sayfaya git",
+      "morePages": "Daha fazla sayfa"
+    },
+    "breadcrumb": {
+      "ariaLabel": "iz yolu"
+    },
+    "spinner": {
+      "loading": "Yükleniyor"
+    },
+    "sidebar": {
+      "title": "Kenar Çubuğu",
+      "mobileDescription": "Mobil kenar çubuğunu gösterir.",
+      "toggle": "Kenar Çubuğunu Aç/Kapat"
+    }
+  },
+  "chat": {
+    "name": "Chrollo"
+  },
+  "mbti": {
+    "intro": {
+      "title": "MBTI Test Derinliğini Seç",
+      "description": "Teste başlamadan önce istediğin derinlik seviyesini seç.",
+      "quick": {
+        "title": "Hızlı (15 soru)",
+        "description": "Geniş bir genel bakış."
+      },
+      "medium": {
+        "title": "Orta (25 soru)",
+        "description": "Daha derin analiz."
+      },
+      "accurate": {
+        "title": "Doğru (40 soru)",
+        "description": "Yüksek hassasiyet için derinlemesine analiz."
+      },
+      "start": "MBTI Testini Başlat"
+    },
+    "scale": {
+      "stronglyAgree": "Kesinlikle Katılıyorum",
+      "agree": "Katılıyorum",
+      "neutral": "Kararsız / Nötr",
+      "disagree": "Katılmıyorum",
+      "stronglyDisagree": "Kesinlikle Katılmıyorum"
+    },
+    "test": {
+      "title": "MBTI Kişilik Testi",
+      "progress": "{{current}} / {{total}}",
+      "completion": "Tüm soruları yanıtladın. MBTI sonucunu görmek için gönder."
+    },
+    "result": {
+      "title": "MBTI Sonucu",
+      "code": "Tip: {{code}}",
+      "depth": "Derinlik: {{depth}}",
+      "dimensions": {
+        "EI": "Dışadönüklük / İçedönüklük",
+        "SN": "Duyumsama / Sezgi",
+        "TF": "Düşünme / Hissetme",
+        "JP": "Yargılama / Algılama"
+      }
+    },
+    "questions": {
+      "q1": "Kalabalık ortamlarda bulunmak bana enerji verir.",
+      "q2": "Sezgilerden çok gerçeklere güvenirim.",
+      "q3": "Karar verirken duygulardan çok mantığı öncelerim.",
+      "q4": "Ani değişiklikler yerine net planları tercih ederim.",
+      "q5": "Konuşmayı başlatan kişi olmayı severim.",
+      "q6": "Olasılıklardan önce pratik detaylara odaklanırım.",
+      "q7": "Sert duyulsa bile doğrudan konuşurum.",
+      "q8": "Seçenekleri açık tutmak yerine işleri hızlıca tamamlamayı tercih ederim.",
+      "q9": "Fikirlerimi anlamak için yüksek sesle düşünürüm.",
+      "q10": "Gizli örüntülerden önce somut gerçekleri fark ederim.",
+      "q11": "Adil kararlar için duyguları ayırabilirim.",
+      "q12": "Programım yapılandırılmış olduğunda daha rahat hissederim.",
+      "q13": "Sosyal buluşmalardan sonra enerjim artar.",
+      "q14": "Denemelerden çok kanıtlanmış yöntemleri tercih ederim.",
+      "q15": "Uyumdan çok nesnel doğruluğu önemserim.",
+      "q16": "Yapılacak listeleri hazırlayıp takip ederim.",
+      "q17": "Düşüncelerimi tam işlemden geçirmeden konuşurum.",
+      "q18": "Soyut teorilerden çok gözlemlenebilir olana güvenirim.",
+      "q19": "İnsanlar katılmasa da fikirleri sorgularım.",
+      "q20": "Son dakika plan değişikliklerinden hoşlanmam.",
+      "q21": "Yalnızlıktan çok grup etkinliklerine doğal olarak yönelirim.",
+      "q22": "Gelecek vizyonundan çok geçmiş deneyime dayanırım.",
+      "q23": "Rasyonel analizle hızlı karar veririm.",
+      "q24": "Rutin ve net beklentileri tercih ederim.",
+      "q25": "Yeni insanlarla kolayca kendimi ifade ederim.",
+      "q26": "Adım adım yönergeleri severim.",
+      "q27": "Gerilimli anlarda duyguları kararın dışına koyabilirim.",
+      "q28": "Planlar belirsiz kaldığında rahatsız olurum.",
+      "q29": "Başkalarıyla konuşarak daha hızlı toparlanırım.",
+      "q30": "Hayali fikirlerden çok gerçekçi seçenekleri tercih ederim.",
+      "q31": "Duygusal etkiden çok sonuca odaklanırım.",
+      "q32": "Son tarihleri önceden planlarım.",
+      "q33": "Sosyal liderlik almaktan rahatsız olmam.",
+      "q34": "Mecazlardan çok somut örnekleri tercih ederim.",
+      "q35": "Fikirlerin gücünü test etmek için tartışırım.",
+      "q36": "Diğerine geçmeden önce bir kararı tamamlamayı severim.",
+      "q37": "Ağ kurma ve etkinlikler beni enerjiyle doldurur.",
+      "q38": "Varsayımlardan çok şu anki gerçeğe odaklanırım.",
+      "q39": "Empatiden çok tutarlılık ve adaleti öncelerim.",
+      "q40": "Düzenli ve öngörülebilir bir ortamı korurum."
+    }
+  },
+  "traits": {
+    "openness": "Deneyime Açıklık",
+    "conscientiousness": "Sorumluluk",
+    "extraversion": "Dışadönüklük",
+    "agreeableness": "Uyumluluk",
+    "neuroticism": "Duygusal Dengesizlik"
+  },
+  "traitsDescriptions": {
+    "openness": "Yaratıcı ve meraklı olma ile temkinli ve alışılmışı tercih etme arasındaki boyut. Entelektüel merak ve yenilik isteğini yansıtır.",
+    "conscientiousness": "Düzenli ve planlı olma ile dağınık ve dikkatsiz olma arasındaki boyut. Disiplin, güvenilirlik ve hedef odağını yansıtır.",
+    "extraversion": "Sosyal ve enerjik olma ile içine dönük ve sakin olma arasındaki boyut. Sosyallik, canlılık ve girişkenliği yansıtır.",
+    "agreeableness": "Nazik ve işbirlikçi olma ile eleştirel ve mesafeli olma arasındaki boyut. Empati, güven ve uyumu yansıtır.",
+    "neuroticism": "Duygusal olarak hassas olma ile dayanıklı ve sakin olma arasındaki boyut. Stres duyarlılığı ve duygusal tepkiselliği yansıtır."
+  },
+  "home": {
+    "page": {
+      "backgroundAlt": "Kozmik Boşluk",
+      "orbAlt": "Gizemli Küre",
+      "badge": "Yapay Zeka Destekli Kişilik Analizi",
+      "titleLead": "Bakışını Çevir",
+      "titleAccent": "Void Troupe",
+      "description": "Dilsel analizle psikolojik derinliklerini keşfet. Düşüncelerini boşluğa bırak; zekamız gerçek doğanı Big Five kişilik boyutlarında haritalasın.",
+      "beginAnalysis": "Analizi Başlat",
+      "frameworkTitle": "OCEAN Çerçevesi"
+    }
+  },
+  "results": {
+    "mbtiSectionTitle": "MBTI Profili",
+    "radarLabels": {
+      "openness": "Açıklık",
+      "conscientiousness": "Sorum.",
+      "extraversion": "Dışa.",
+      "agreeableness": "Uyum.",
+      "neuroticism": "Nörot."
+    },
+    "page": {
+      "backToVoid": "Void'a Dön",
+      "title": "Psikoloji Haritan",
+      "wordCountDescription": "{{count}} kelimelik gönderimine göre oluşturuldu.",
+      "noAnalysisFallback": "Henüz analiz yüklenmedi. Sohbet, dengeli varsayılan skorlarla kullanılabilir.",
+      "shareButton": "Sonucu Paylaş",
+      "dimensionalWebTitle": "Boyutsal Ağ",
+      "yourScore": "Skorun"
+    },
+    "summary": {
+      "title": "Psikolojik İçgörü",
+      "fallback": "Sözlerin, yüzeyin altında gerçek bir derinlik taşıyan birini gösteriyor — düşünceli, duygusal olarak farkında ve sessizce netlik arayan biri. Duygu ağır olsa bile, kendini bu kadar dürüst ifade etmenin gücü var."
+    },
+    "chat": {
+      "title": "Persona Sohbeti",
+      "restoreAriaLabel": "Persona Sohbetini Geri Aç",
+      "minimizeAriaLabel": "Persona Sohbetini Küçült",
+      "introNoMbti": "Profilini açıklamak ve pratik sonraki adımlarda yardımcı olmak için buradayım. Big Five sonuçların hakkında her şeyi sorabilirsin.",
+      "introWithMbti": "Profilini açıklamak ve pratik sonraki adımlarda yardımcı olmak için buradayım. MBTI sonucun {{mbti}} ve bunu Big Five skorlarınla birlikte yorumlayabilirim. Her şeyi sorabilirsin.",
+      "thinking": "Düşünüyorum...",
+      "inputPlaceholder": "Kişilik profilin hakkında sor...",
+      "sendButton": "Gönder",
+      "fetchError": "Sohbet yanıtı alınamadı",
+      "emptyResponseError": "Asistan boş bir yanıt döndürdü.",
+      "unexpectedError": "Mesaj gönderilirken beklenmeyen bir hata oluştu."
+    }
+  },
+  "history": {
+    "page": {
+      "title": "Analiz Kayıtları",
+      "loading": "Arşivlere erişiliyor...",
+      "fetchError": "Kayıtlar alınamadı. Boşluk sessiz.",
+      "invalidResponse": "API'den beklenmeyen bir yanıt geldi. Backend'in 8081 portunda çalıştığından emin ol (8080 değil).",
+      "emptyTitle": "Kayıt Bulunamadı",
+      "emptyDescription": "Henüz boşluğa hiçbir düşünce göndermedin.",
+      "startAnalysis": "Analizi Başlat",
+      "analysisId": "ID: #{{id}}",
+      "wordsAnalyzed": "{{count}} kelime analiz edildi"
+    }
+  },
+  "analyze": {
+    "page": {
+      "title": "Boşluğa Konuş",
+      "description": "Hayatın, hayallerin, korkuların veya yakın bir deneyimin hakkında özgürce yaz. Ne kadar içten olursan analiz o kadar derin olur.",
+      "placeholder": "Hatırlıyorum ki...",
+      "wordCounter": "{{current}} / {{minimum}} kelime",
+      "submit": "Doğamı Ortaya Çıkar",
+      "analyzing": "Psikoloji analiz ediliyor...",
+      "genericError": "Analiz sırasında bir hata oluştu.",
+      "invalidApiResponse": "Geçersiz API yanıtı. Backend'i 8081 portunda yeniden başlatıp frontend'i yenileyin."
+    }
+  },
+  "notFound": {
+    "page": {
+      "title": "404 Sayfa Bulunamadı",
+      "description": "İstediğiniz sayfa mevcut değil."
+    }
+  },
+  "auth": {
+    "fields": {
+      "name": "Ad Soyad",
+      "email": "E-posta",
+      "password": "Şifre"
+    },
+    "placeholders": {
+      "name": "Adınızı ve soyadınızı girin",
+      "email": "name@example.com",
+      "password": "Şifrenizi girin"
+    },
+    "errors": {
+      "generic": "Bir sorun oluştu. Lütfen tekrar deneyin."
+    },
+    "login": {
+      "title": "Giriş Yap",
+      "subtitle": "Profilinize ve kayıtlı analizlerinize erişmek için giriş yapın.",
+      "submit": "Giriş Yap",
+      "forgotPassword": "Şifremi unuttum?",
+      "createAccount": "Hesap oluştur"
+    },
+    "register": {
+      "title": "Hesap Oluştur",
+      "subtitle": "Void Troupe'a katılın ve kişilik yolculuğunuzu kaydedin.",
+      "submit": "Hesap Oluştur",
+      "alreadyHaveAccount": "Zaten hesabınız var mı? Giriş yapın"
+    },
+    "forgot": {
+      "title": "Şifre Sıfırla",
+      "subtitle": "E-postanızı girin, sıfırlama adımlarını gönderelim.",
+      "submit": "Sıfırlama Bağlantısı Gönder",
+      "success": "E-posta varsa sıfırlama bağlantısı gönderildi.",
+      "backToLogin": "Girişe dön"
+    },
+    "reset": {
+      "title": "Yeni Şifre Belirle",
+      "subtitle": "Yeni şifrenizi aşağıya girin.",
+      "confirmPassword": "Şifreyi Onayla",
+      "confirmPasswordPlaceholder": "Şifrenizi tekrar girin",
+      "submit": "Şifreyi Güncelle",
+      "success": "Şifre başarıyla güncellendi. Girişe yönlendiriliyorsunuz...",
+      "invalidLink": "Bu sıfırlama bağlantısı geçersiz. Yeni bir bağlantı isteyin.",
+      "passwordTooShort": "Şifre en az 6 karakter olmalıdır.",
+      "passwordMismatch": "Şifreler eşleşmiyor."
+    }
+  },
+  "profile": {
+    "page": {
+      "title": "Profil",
+      "subtitle": "Hesap bilgilerinizi ve ayarlarınızı yönetin.",
+      "saveButton": "Değişiklikleri Kaydet",
+      "saveSuccess": "Profil başarıyla güncellendi.",
+      "logoutButton": "Çıkış Yap"
+    },
+    "security": "Güvenlik",
+    "currentPassword": "Mevcut Şifre",
+    "newPassword": "Yeni Şifre",
+    "confirmPassword": "Şifreyi Onayla",
+    "personalitySummary": "Kişilik Özeti ve Tercihleri",
+    "latestResult": "Son Sonuç: {{result}}",
+    "reportLanguagePreference": "Rapor Dili Tercihi",
+    "reportLanguageOptions": {
+      "english": "İngilizce",
+      "turkish": "Türkçe",
+      "arabic": "Arapça"
+    }
+  }
+}

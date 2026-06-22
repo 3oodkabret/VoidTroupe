@@ -1,0 +1,298 @@
+{
+  "ui": {
+    "nav": {
+      "brand": "VOID TROUPE",
+      "history": "History",
+      "startAnalysis": "Start Analysis",
+      "mbtiTest": "MBTI Test",
+      "language": "Language",
+      "profile": "Profile",
+      "login": "Login",
+      "logout": "Logout"
+    },
+    "languageNames": {
+      "en": "English",
+      "ar": "Arabic",
+      "tr": "Turkish"
+    },
+    "common": {
+      "next": "Next",
+      "back": "Back",
+      "submit": "Submit",
+      "finish": "Finish",
+      "question": "Question"
+    },
+    "a11y": {
+      "more": "More",
+      "close": "Close",
+      "previousSlide": "Previous slide",
+      "nextSlide": "Next slide"
+    },
+    "pagination": {
+      "ariaLabel": "pagination",
+      "previous": "Previous",
+      "next": "Next",
+      "previousAria": "Go to previous page",
+      "nextAria": "Go to next page",
+      "morePages": "More pages"
+    },
+    "breadcrumb": {
+      "ariaLabel": "breadcrumb"
+    },
+    "spinner": {
+      "loading": "Loading"
+    },
+    "sidebar": {
+      "title": "Sidebar",
+      "mobileDescription": "Displays the mobile sidebar.",
+      "toggle": "Toggle Sidebar"
+    }
+  },
+  "chat": {
+    "name": "Chrollo"
+  },
+  "mbti": {
+    "intro": {
+      "title": "Choose Your MBTI Test Depth",
+      "description": "Pick the level of depth you want before starting the personality test.",
+      "quick": {
+        "title": "Quick (15 questions)",
+        "description": "Broad overview."
+      },
+      "medium": {
+        "title": "Medium (25 questions)",
+        "description": "Deeper analysis."
+      },
+      "accurate": {
+        "title": "Accurate (40 questions)",
+        "description": "Deep dive for highly precise results."
+      },
+      "start": "Start MBTI Test"
+    },
+    "scale": {
+      "stronglyAgree": "Strongly Agree",
+      "agree": "Agree",
+      "neutral": "Cannot Decide / Neutral",
+      "disagree": "Disagree",
+      "stronglyDisagree": "Strongly Disagree"
+    },
+    "test": {
+      "title": "MBTI Personality Test",
+      "progress": "{{current}} / {{total}}",
+      "completion": "You answered all questions. Submit to see your MBTI result."
+    },
+    "result": {
+      "title": "MBTI Result",
+      "code": "Type: {{code}}",
+      "depth": "Depth: {{depth}}",
+      "dimensions": {
+        "EI": "Extraversion / Introversion",
+        "SN": "Sensing / Intuition",
+        "TF": "Thinking / Feeling",
+        "JP": "Judging / Perceiving"
+      }
+    },
+    "questions": {
+      "q1": "I gain energy from being around many people.",
+      "q2": "I trust facts more than gut impressions.",
+      "q3": "I prioritize logic over personal feelings when deciding.",
+      "q4": "I prefer clear plans over spontaneous changes.",
+      "q5": "I enjoy being the one who starts conversations.",
+      "q6": "I focus on practical details before possibilities.",
+      "q7": "I tend to be direct even if it sounds blunt.",
+      "q8": "I like to close tasks quickly rather than keep options open.",
+      "q9": "I think out loud to understand my ideas.",
+      "q10": "I usually notice concrete facts before hidden patterns.",
+      "q11": "I can detach emotions to make fair choices.",
+      "q12": "I feel more comfortable when my schedule is structured.",
+      "q13": "I feel energized after social gatherings.",
+      "q14": "I prefer proven methods over experimentation.",
+      "q15": "I value objective truth more than harmony.",
+      "q16": "I create to-do lists and follow them closely.",
+      "q17": "I speak before I fully process my thoughts.",
+      "q18": "I trust what is observable more than abstract theories.",
+      "q19": "I challenge ideas even when people may disagree.",
+      "q20": "I dislike last-minute changes in plans.",
+      "q21": "I naturally seek group activities over solo time.",
+      "q22": "I rely on past experience more than future vision.",
+      "q23": "I decide quickly based on rational analysis.",
+      "q24": "I prefer routines and clear expectations.",
+      "q25": "I openly express myself with new people.",
+      "q26": "I enjoy step-by-step instructions.",
+      "q27": "I can separate feelings from decisions in tense moments.",
+      "q28": "I feel uneasy when plans stay undefined.",
+      "q29": "I recover faster by talking to others.",
+      "q30": "I trust realistic options over imaginative ideas.",
+      "q31": "I evaluate outcomes more than emotional impact.",
+      "q32": "I plan ahead for deadlines and milestones.",
+      "q33": "I feel comfortable taking social leadership.",
+      "q34": "I prefer concrete examples over metaphors.",
+      "q35": "I argue ideas to test their strength.",
+      "q36": "I like to complete one decision before starting another.",
+      "q37": "I am energized by networking and events.",
+      "q38": "I focus on what is currently real, not hypothetical.",
+      "q39": "I prioritize consistency and fairness over empathy.",
+      "q40": "I keep my environment organized and predictable."
+    }
+  },
+  "traits": {
+    "openness": "Openness",
+    "conscientiousness": "Conscientiousness",
+    "extraversion": "Extraversion",
+    "agreeableness": "Agreeableness",
+    "neuroticism": "Neuroticism"
+  },
+  "traitsDescriptions": {
+    "openness": "Inventive and curious vs. consistent and cautious. Reflects intellectual curiosity, creativity, and a preference for novelty.",
+    "conscientiousness": "Efficient and organized vs. extravagant and careless. Reflects dependability, discipline, and goal-oriented behavior.",
+    "extraversion": "Outgoing and energetic vs. solitary and reserved. Reflects sociability, positive emotion, and assertiveness.",
+    "agreeableness": "Friendly and compassionate vs. critical and rational. Reflects cooperation, trust, and empathy.",
+    "neuroticism": "Sensitive and nervous vs. resilient and confident. Reflects emotional reactivity and stress sensitivity."
+  },
+  "home": {
+    "page": {
+      "backgroundAlt": "Cosmic Void",
+      "orbAlt": "Mysterious Orb",
+      "badge": "AI-Powered Personality Analysis",
+      "titleLead": "Gaze Into The",
+      "titleAccent": "Void Troupe",
+      "description": "Uncover the depths of your psyche through linguistic analysis. Pour your thoughts into the void, and let our intelligence map your true nature across the Big Five personality dimensions.",
+      "beginAnalysis": "Begin Analysis",
+      "frameworkTitle": "The OCEAN Framework"
+    }
+  },
+  "results": {
+    "mbtiSectionTitle": "MBTI Profile",
+    "radarLabels": {
+      "openness": "Open",
+      "conscientiousness": "Consc.",
+      "extraversion": "Extra.",
+      "agreeableness": "Agree.",
+      "neuroticism": "Neuro."
+    },
+    "page": {
+      "backToVoid": "Back to Void",
+      "title": "Your Psyche Map",
+      "wordCountDescription": "Based on your submission of {{count}} words.",
+      "noAnalysisFallback": "No analysis loaded yet. Chat is available with balanced default scores.",
+      "shareButton": "Share Result",
+      "dimensionalWebTitle": "Dimensional Web",
+      "yourScore": "Your Score"
+    },
+    "summary": {
+      "title": "Psychological Insight",
+      "fallback": "Your words reveal someone carrying real depth beneath the surface — thoughtful, emotionally aware, and quietly searching for clarity. There is strength in how honestly you express yourself, even when the feeling is heavy."
+    },
+    "chat": {
+      "title": "Persona Chat",
+      "restoreAriaLabel": "Restore Persona Chat",
+      "minimizeAriaLabel": "Minimize Persona Chat",
+      "introNoMbti": "I'm here to explain your profile and help with practical next steps. Ask me anything about your Big Five results.",
+      "introWithMbti": "I'm here to explain your profile and help with practical next steps. Your MBTI result is {{mbti}}, and I can connect that with your Big Five scores. Ask me anything.",
+      "thinking": "Thinking...",
+      "inputPlaceholder": "Ask about your personality profile...",
+      "sendButton": "Send",
+      "fetchError": "Failed to fetch chat response",
+      "emptyResponseError": "The assistant returned an empty response.",
+      "unexpectedError": "Unexpected error while sending chat message."
+    }
+  },
+  "history": {
+    "page": {
+      "title": "Analysis Records",
+      "loading": "Accessing the archives...",
+      "fetchError": "Failed to retrieve records. The void is silent.",
+      "invalidResponse": "Unexpected response from the API. Make sure the backend is running on port 8081 (not 8080).",
+      "emptyTitle": "No Records Found",
+      "emptyDescription": "You haven't submitted any thoughts to the void yet.",
+      "startAnalysis": "Start Analysis",
+      "analysisId": "ID: #{{id}}",
+      "wordsAnalyzed": "{{count}} words analyzed"
+    }
+  },
+  "analyze": {
+    "page": {
+      "title": "Speak to the Void",
+      "description": "Write freely about your life, your dreams, your fears, or a recent experience. The more authentic you are, the deeper the analysis.",
+      "placeholder": "I remember when...",
+      "wordCounter": "{{current}} / {{minimum}} words",
+      "submit": "Reveal My Nature",
+      "analyzing": "Analyzing Psyche...",
+      "genericError": "An error occurred during analysis.",
+      "invalidApiResponse": "Invalid API response. Restart the backend on port 8081 and reload the frontend."
+    }
+  },
+  "notFound": {
+    "page": {
+      "title": "404 Page Not Found",
+      "description": "The page you requested does not exist."
+    }
+  },
+  "auth": {
+    "fields": {
+      "name": "Full Name",
+      "email": "Email",
+      "password": "Password"
+    },
+    "placeholders": {
+      "name": "Enter your full name",
+      "email": "name@example.com",
+      "password": "Enter your password"
+    },
+    "errors": {
+      "generic": "Something went wrong. Please try again."
+    },
+    "login": {
+      "title": "Login",
+      "subtitle": "Sign in to access your profile and saved analyses.",
+      "submit": "Sign In",
+      "forgotPassword": "Forgot password?",
+      "createAccount": "Create account"
+    },
+    "register": {
+      "title": "Create Account",
+      "subtitle": "Join Void Troupe and save your personality journey.",
+      "submit": "Create Account",
+      "alreadyHaveAccount": "Already have an account? Login"
+    },
+    "forgot": {
+      "title": "Reset Password",
+      "subtitle": "Enter your email and we will send reset instructions.",
+      "submit": "Send Reset Link",
+      "success": "If your email exists, a reset link has been sent.",
+      "backToLogin": "Back to login"
+    },
+    "reset": {
+      "title": "Choose New Password",
+      "subtitle": "Enter your new password below.",
+      "confirmPassword": "Confirm Password",
+      "confirmPasswordPlaceholder": "Re-enter your password",
+      "submit": "Update Password",
+      "success": "Password updated successfully. Redirecting to login...",
+      "invalidLink": "This reset link is invalid. Request a new one.",
+      "passwordTooShort": "Password must be at least 6 characters.",
+      "passwordMismatch": "Passwords do not match."
+    }
+  },
+  "profile": {
+    "page": {
+      "title": "Profile",
+      "subtitle": "Manage your account details and settings.",
+      "saveButton": "Save Changes",
+      "saveSuccess": "Profile updated successfully.",
+      "logoutButton": "Logout"
+    },
+    "security": "Security",
+    "currentPassword": "Current Password",
+    "newPassword": "New Password",
+    "confirmPassword": "Confirm Password",
+    "personalitySummary": "Personality Summary & Preferences",
+    "latestResult": "Latest Result: {{result}}",
+    "reportLanguagePreference": "Report Language Preference",
+    "reportLanguageOptions": {
+      "english": "English",
+      "turkish": "Turkish",
+      "arabic": "Arabic"
+    }
+  }
+}

@@ -18,3 +18,5 @@
 //   export type Post = typeof postsTable.$inferSelect;
 
 export * from "./analyses";
+export * from "./users";
+export * from "./password-reset-tokens";

@@ -306,7 +306,7 @@ router.get("/analyses", async (_req, res) => {
     .limit(20);
 
   const response = GetAnalysesResponse.parse({
-    analyses: rows.map((row: (typeof rows)[number]) => ({
+    analyses: rows.map((row) => ({
       id: row.id,
       wordCount: row.wordCount,
       scores: {
