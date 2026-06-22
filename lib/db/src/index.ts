@@ -8,26 +8,47 @@ function normalizeDatabaseUrl(value: string): string {
   return value.trim().replace(/^["']|["']$/g, "");
 }
 
+function getPoolConfig(rawUrl: string) {
+  const normalized = normalizeDatabaseUrl(rawUrl);
+  let connectionString = normalized;
+  let hostname = "";
+
+  try {
+    const parsed = new URL(normalized);
+    hostname = parsed.hostname;
+    // pg treats sslmode=require as strict TLS verification, which breaks Supabase pooler on Render.
+    parsed.searchParams.delete("sslmode");
+    connectionString = parsed.toString();
+  } catch {
+    // Keep the raw string if it is not a standard URL.
+  }
+
+  const isLocal =
+    hostname === "localhost" ||
+    hostname === "127.0.0.1" ||
+    connectionString.includes("@localhost") ||
+    connectionString.includes("@127.0.0.1");
+
+  return {
+    connectionString,
+    ssl: isLocal
+      ? undefined
+      : {
+          rejectUnauthorized: false,
+        },
+    connectionTimeoutMillis: 10_000,
+  };
+}
+
 if (!process.env.DATABASE_URL) {
   throw new Error(
     "DATABASE_URL must be set. Did you forget to provision a database?",
   );
 }
 
-export const connectionString = normalizeDatabaseUrl(process.env.DATABASE_URL);
-
-const needsSsl =
-  connectionString.includes("supabase.co") ||
-  connectionString.includes("pooler.supabase.com") ||
-  connectionString.includes("neon.tech") ||
-  connectionString.includes("sslmode=require");
-
-export const pool = new Pool({
-  connectionString,
-  ssl: needsSsl ? { rejectUnauthorized: false } : undefined,
-  connectionTimeoutMillis: 10_000,
-});
-
+const poolConfig = getPoolConfig(process.env.DATABASE_URL);
+export const connectionString = poolConfig.connectionString;
+export const pool = new Pool(poolConfig);
 export const db = drizzle(pool, { schema });
 
 export type DatabasePingResult =
@@ -51,10 +72,6 @@ export function getDatabaseConnectionHints(url: string): string[] {
 
   if (url.includes("pooler.supabase.com") && url.includes("postgres@") && !url.includes("postgres.")) {
     hints.push("Pooler username should be postgres.<project-ref>, not postgres.");
-  }
-
-  if (!url.includes("sslmode=require")) {
-    hints.push("Append ?sslmode=require to the end of DATABASE_URL.");
   }
 
   return hints;
